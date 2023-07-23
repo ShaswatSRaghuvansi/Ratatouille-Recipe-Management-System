@@ -1,8 +1,11 @@
 # unused-library-4088
-Recipe Management System
+
+# RECIPE     MANAGEMENT     SYSTEM
 
 
 ## Domain Description <br>
+
+
 The Recipe Management System is a software solution designed to assist users in managing and organizing their recipes. The system aims to provide users with a user-friendly interface to store, search, and retrieve recipes easily.  <br>
 It allows customers to view recipes, filter recipes based on ingredients, and give likes to their favorite recipes. The admin user has additional functionalities to manage recipes, view likes, and perform CRUD operations on recipes.  <br>
 The system will be developed using a Java programming language, MySQL as the database management system, and Hibernate as the Object-Relational Mapping (ORM) framework.
