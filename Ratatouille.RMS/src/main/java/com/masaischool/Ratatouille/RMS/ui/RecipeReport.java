@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import com.masai.Utility.EMUtils;
+import com.masaischool.Ratatouille.RMS.Utility.EMUtils;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;

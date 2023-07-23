@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.Scanner;
 
 
-import com.masai.entity.Recipe;
-import com.masai.exception.NoRecordFoundException;
-import com.masai.exception.SomeThingWentWrongException;
-import com.masai.service.AdminSer;
-import com.masai.service.AdminSerImp;
-import com.masai.service.RecipeLikeSer;
-import com.masai.service.RecipeLikeSerImp;
-import com.masai.service.RecipeSer;
-import com.masai.service.RecipeSerImp;
+import com.masaischool.Ratatouille.RMS.entity.Recipe;
+import com.masaischool.Ratatouille.RMS.exception.NoRecordFoundException;
+import com.masaischool.Ratatouille.RMS.exception.SomeThingWentWrongException;
+import com.masaischool.Ratatouille.RMS.service.AdminSer;
+import com.masaischool.Ratatouille.RMS.service.AdminSerImp;
+import com.masaischool.Ratatouille.RMS.service.RecipeLikeSer;
+import com.masaischool.Ratatouille.RMS.service.RecipeLikeSerImp;
+import com.masaischool.Ratatouille.RMS.service.RecipeSer;
+import com.masaischool.Ratatouille.RMS.service.RecipeSerImp;
 
 
 

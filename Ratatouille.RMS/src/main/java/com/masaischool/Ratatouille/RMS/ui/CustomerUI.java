@@ -4,17 +4,17 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import com.masai.Utility.EMUtils;
-import com.masai.entity.LoggedInUserId;
-import com.masai.entity.Recipe;
-import com.masai.entity.RecipeLike;
-import com.masai.entity.User;
-import com.masai.exception.NoRecordFoundException;
-import com.masai.exception.SomeThingWentWrongException;
-import com.masai.service.CustomerSer;
-import com.masai.service.CustomerSerImp;
-import com.masai.service.RecipeSer;
-import com.masai.service.RecipeSerImp;
+import com.masaischool.Ratatouille.RMS.Utility.EMUtils;
+import com.masaischool.Ratatouille.RMS.entity.LoggedInUserId;
+import com.masaischool.Ratatouille.RMS.entity.Recipe;
+import com.masaischool.Ratatouille.RMS.entity.RecipeLike;
+import com.masaischool.Ratatouille.RMS.entity.User;
+import com.masaischool.Ratatouille.RMS.exception.NoRecordFoundException;
+import com.masaischool.Ratatouille.RMS.exception.SomeThingWentWrongException;
+import com.masaischool.Ratatouille.RMS.service.CustomerSer;
+import com.masaischool.Ratatouille.RMS.service.CustomerSerImp;
+import com.masaischool.Ratatouille.RMS.service.RecipeSer;
+import com.masaischool.Ratatouille.RMS.service.RecipeSerImp;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
