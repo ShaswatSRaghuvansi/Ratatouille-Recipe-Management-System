@@ -65,6 +65,7 @@ public class CustomerUI {
 		String username = sc.next();
 		System.out.print("Enter password 🔑");
 		String password = sc.next();
+		System.out.println();
 		try {
 			CustomerSer customerService = new CustomerSerImp();
 			customerService.login(username, password);
@@ -237,6 +238,9 @@ public class CustomerUI {
 		            addLike();
 		            break;
 		        case 2:
+		        	System.out.println();
+		        	System.out.println("❌ We are presently engaged in the task ❌");
+		        	System.out.println();
 		            removeLike();
 		            break;
 		        case 0:

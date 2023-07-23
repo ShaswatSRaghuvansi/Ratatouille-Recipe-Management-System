@@ -1,12 +1,15 @@
 # unused-library-4088
-Recipe Management System
+
+# RECIPE     MANAGEMENT     SYSTEM
 
 
 ## Domain Description <br>
 
+
 ![Slide1](https://github.com/ShaswatSRaghuvansi/Ratatouille-Recipe-Management-System/assets/115460278/04bcefbb-190d-4074-9a0b-ee6cae3fba5b)
 
 ![Slide2](https://github.com/ShaswatSRaghuvansi/Ratatouille-Recipe-Management-System/assets/115460278/aadf42ce-1899-4d6b-9361-7ddfbd7a82cf)
+
 
 The Recipe Management System is a software solution designed to assist users in managing and organizing their recipes. The system aims to provide users with a user-friendly interface to store, search, and retrieve recipes easily.  <br>
 It allows customers to view recipes, filter recipes based on ingredients, and give likes to their favorite recipes. The admin user has additional functionalities to manage recipes, view likes, and perform CRUD operations on recipes.  <br>
