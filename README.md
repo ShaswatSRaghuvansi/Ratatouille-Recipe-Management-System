@@ -45,21 +45,23 @@ To log in as an existing user, please use the following credentials:
 You can import the MySQL file provided with the extension .SQL into your system. This will allow you to use the database schema used during the creation of this project and make updates as needed.
 
 ## Import a SQL file using mysqldump
-To import a .sql file with mysqldump, use the mysqlimport command and use the following flags and syntax 
-$ mysqlimport -u root -p root ~/backup/database/magazines.sql
+To import a .sql file with mysqldump, use the mysqlimport command and use the following flags and syntax <br>
+$ mysqlimport -u root -p root ~/backup/database/magazines.sql<br>
 
-◉ -u and -p are needed for authentication, and is then followed by the name of the database you want to import into.
-◉ You'll need to specify the path to your SQL dump file that will contain your import data: ~/backup/database/magazines.sql
-◉ You won't need to use > or < for importing, but you will need them for exporting in the next guide.
-◉ This will prompt a password request.
-◉ Your file will be automatically imported.
+◉ -u and -p are needed for authentication, and is then followed by the name of the database you want to import into. <br>
+◉ You'll need to specify the path to your SQL dump file that will contain your import data: ~/backup/database/magazines.sql<br>
+◉ You won't need to use > or < for importing, but you will need them for exporting in the next guide.<br>
+◉ This will prompt a password request.<br>
+◉ Your file will be automatically imported.<br>
+
+Learn to <a href="https://www.youtube.com/watch?v=sJ64ZiB6PUU&t=324s"> Import&Export </a>Database in MySql.
 
 # Notes:
 
-◉ After entering this command, you may be asked to enter the password for the MySQL user that you used.
-◉ Please be careful when using an existing database that has records as this command will overwrite your existing database and end up losing your records.
+◉ After entering this command, you may be asked to enter the password for the MySQL user that you used.<br>
+◉ Please be careful when using an existing database that has records as this command will overwrite your existing database and end up losing your records.<br>
 
-For any further feedback, suggestions, or assistance, please feel free to contact us. We are here to help and support you.
+For any further feedback, suggestions, or assistance, please feel free to contact us. We are here to help and support you.<br>
 
 Let's Connect 🫰
 
