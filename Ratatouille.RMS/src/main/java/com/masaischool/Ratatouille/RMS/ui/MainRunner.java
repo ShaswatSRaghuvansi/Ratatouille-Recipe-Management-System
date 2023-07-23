@@ -5,7 +5,18 @@ import java.util.Scanner;
 public class MainRunner {
 
 	static void displayAdminMenu() {
+//	System.out.println("    ██████╗  █████╗ ████████╗ █████╗ ████████╗ ██████╗ ██╗   ██╗██╗██╗     ██╗     ███████╗███████╗\n"
+//			+ 		"		██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══██╔══╝██╔═══██╗██║   ██║██║██║     ██║     ██╔════╝██╔════╝\n"
+//			+ 		"		██████╔╝███████║   ██║   ███████║   ██║   ██║   ██║██║   ██║██║██║     ██║     █████╗  ███████╗\n"
+//			+		 "		██╔══██╗██╔══██║   ██║   ██╔══██║   ██║   ██║   ██║██║   ██║██║██║     ██║     ██╔══╝  ╚════██║\n"
+//			+ 		"		██║  ██║██║  ██║   ██║   ██║  ██║   ██║   ╚██████╔╝╚██████╔╝██║███████╗███████╗███████╗███████║\n"
+//			+ 		"		╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝    ╚═════╝  ╚═════╝ ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝");	
+//	
+//	
+
+		System.out.println();
 		System.out.println("+===========================+");
+		System.out.println();
 		System.out.println("1. Add Recipes");
 		System.out.println("2. Update the Recipes");
 		System.out.println("3. Delete Recipes");
@@ -13,7 +24,10 @@ public class MainRunner {
 		System.out.println("5. View Recipe Review");
 		System.out.println("-1. Previous Menu");
 		System.out.println("0. Logout");
+		System.out.println();
 		System.out.println("+===========================+");
+		System.out.println();
+		System.out.println();
 	}
 //  <===============================MENU PORTAL STARTS HERE====================================>
 	static void adminMenu(Scanner sc) {
@@ -54,12 +68,20 @@ public class MainRunner {
     				MainRunner.main(new String[0]);
     				break;
 			case 0:
+				System.out.println();
 				System.out.println("Good Bye Admin 👋");
+				System.out.println();
 				System.out.println("============================");
+				System.out.println();
+				System.out.println();
 				break;
 			default:
+				System.out.println();
 				System.out.println("🚫 Invalid Selection 🚫, try again");
+				System.out.println();
 				System.out.println("==================================");
+				System.out.println();
+				System.out.println();
 			}
 		} while (choice != 0);
 	}
@@ -69,17 +91,26 @@ public class MainRunner {
 //  <===============================ADMIN PORTAL STARTS HERE====================================>
 	
 	static void adminLogin(Scanner sc) {
+		System.out.println();
 		System.out.println("===============");
+		System.out.println();
 		System.out.print("Enter username 👨‍💻");
 		String username = sc.next();
 		System.out.print("Enter password 🔑");
 		String password = sc.next();
+		
 		if (username.equals("admin") && password.equals("admin")) {
 			adminMenu(sc);
 		} else {
+			System.out.println();
+			System.out.println();
 			System.out.println("===============================");
+			System.out.println();
 			System.out.println("🚫 Invalid Username of Password");
+			System.out.println();
 			System.out.println("===============================");
+			System.out.println();
+			System.out.println();
 		}
 	}
 
@@ -87,13 +118,20 @@ public class MainRunner {
 		Scanner sc = new Scanner(System.in);
 		int choice = 0;
 		do {
+			System.out.println();
+			System.out.println();
 			System.out.println("============================");
+			System.out.println();
 			System.out.println("1. 👨‍💻 Admin Login ");
 			System.out.println("2. 🔑 Customer Login ");
 			System.out.println("3. 👤 Customer Registration ");
 			System.out.println("0. ❌ Exit");
+			System.out.println();
 			System.out.println("============================");
+			System.out.println();
+			System.out.println();
 			System.out.print("Enter Selection ");
+			
 			choice = sc.nextInt();
 			switch (choice) {
 			case 1:
