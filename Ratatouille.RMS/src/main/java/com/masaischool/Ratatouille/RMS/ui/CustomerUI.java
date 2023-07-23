@@ -22,7 +22,9 @@ import jakarta.persistence.EntityTransaction;
 public class CustomerUI {
 
 	public static void customerRegistration(Scanner sc) {
-		System.out.println("=================");
+		System.out.println();
+		System.out.println();
+		System.out.println("=================================");
 		System.out.println("Enter UserName 👤");
 		String userName = sc.next();
 
@@ -38,9 +40,15 @@ public class CustomerUI {
 
 		try {
 			customerSer.addCustomer(user);
-			System.out.println("========================");
+			System.out.println();
+			System.out.println();
+			System.out.println("=================================");
+			System.out.println();
 			System.out.println("User Added Successfully 👍");
-			System.out.println("========================");
+			System.out.println();
+			System.out.println("=================================");
+			System.out.println();
+			System.out.println();
 		} catch (SomeThingWentWrongException ex) {
 			System.out.println(ex.getMessage());
 		}
@@ -48,7 +56,11 @@ public class CustomerUI {
 	}
 
 	static void userLogin(Scanner sc) {
-		System.out.println("============================");
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("=================================");
+		System.out.println();
 		System.out.print("Enter username 👤");
 		String username = sc.next();
 		System.out.print("Enter password 🔑");
@@ -63,22 +75,33 @@ public class CustomerUI {
 	}
 
 	static void displayUserMenu() {
+		System.out.println();
+		System.out.println();
 		System.out.println("=====================================");
+		System.out.println();
 		System.out.println("1. View All Recipe");
 		System.out.println("2. Find Recipe With Given Ingredients");
 		System.out.println("3. Like Or Bookmark 🔖");
 		System.out.println("0. Logout");
 		System.out.println("-1. Previous Menu");
+		System.out.println();
 		System.out.println("=====================================");
+		System.out.println();
+		System.out.println();
 	}
 
 	public static void userMenu(Scanner sc) {
 		int choice = 0;
 		do {
 			displayUserMenu();
-			System.out.println("=================================");
+			System.out.println();
+			System.out.println();
+			System.out.println("=====================================");
+			System.out.println();
 			System.out.print("Enter selection ");
 			choice = sc.nextInt();
+			System.out.println();
+			System.out.println();
 			switch (choice) {
 			case 1:
 				// this code is same as we have used on the admin side
@@ -107,18 +130,28 @@ public class CustomerUI {
 			case 0:
 				LoggedInUserId.loggedInUserId = -1; // -1 id cannot belong to any customer
 				System.out.println("Have a Great Day User 👋");
-				System.out.println("======================");
+				System.out.println();
+				System.out.println("=====================================");
+				System.out.println();
+				System.out.println();
 				break;
 			default:
+				System.out.println();
 				System.out.println("🚫 Invalid Selection 🚫, try again");
+				System.out.println();
+				System.out.println();
 			}
 		} while (choice != 0);
 	}
 
 	private static void findRecipeWithGivenIngredients(Scanner sc) {
-		System.out.println("============================");
+		
+		System.out.println("=====================================");
+		System.out.println();
 		System.out.println("Enter the Ingrident ");
 		String ingridents = sc.next();
+		System.out.println();
+		System.out.println();
 		RecipeSer recipeSer = new RecipeSerImp();
 		try {
 			List<Recipe> recipeList = recipeSer.viewRecipesWithGivenIngredients( ingridents);
@@ -148,11 +181,17 @@ public class CustomerUI {
 	    
 	    int choice ;
 	    do {
-	    	System.out.println("================================");
+	    	System.out.println();
+	    	System.out.println();
+	    	System.out.println("=====================================");
+	    	System.out.println();
 	    	System.out.println("You Want to Like or Save Recipe 🔖?" );
 			System.out.println("1. Yes");
 			System.out.println("0. No");
-			System.out.println("================================");
+			System.out.println();
+			System.out.println("=====================================");
+			System.out.println();
+			System.out.println();
 		    
 		    choice =  scanner.nextInt();
 		    switch (choice) {
@@ -163,7 +202,11 @@ public class CustomerUI {
 		        	userMenu(scanner);
 		            break;
 		        default:
+		        	System.out.println();
+		        	System.out.println();
 		            System.out.println("🚫 Invalid choice! 🚫");
+		            System.out.println();
+		            System.out.println();
 		    }
 	    }while(choice != 0);
 		
@@ -177,11 +220,17 @@ public class CustomerUI {
 	    
 	    int choice ;
 	    do {
-	    	System.out.println("===============================");
+	    	System.out.println();
+	    	System.out.println();
+	    	System.out.println("=====================================");
+	    	System.out.println();
 		    System.out.println("1. Add Like 👍");
 		    System.out.println("2. Remove Like 👎");
 		    System.out.println("0. Go back to the previous menu");
-		    System.out.println("===============================");
+		    System.out.println();
+		    System.out.println("=====================================");
+		    System.out.println();
+		    System.out.println();
 		    choice =  scanner.nextInt();
 		    switch (choice) {
 		        case 1:
@@ -195,7 +244,11 @@ public class CustomerUI {
 		        	likeOrUnlike();
 		            break;
 		        default:
+		        	System.out.println();
+		        	System.out.println();
 		            System.out.println("🚫 Invalid choice! 🚫");
+		            System.out.println();
+		            System.out.println();
 		    }
 	    }while(choice != 0);
 	    
@@ -245,9 +298,14 @@ public class CustomerUI {
 
 	private static void addLike() {
 	    Scanner scanner = new Scanner(System.in);
+	    System.out.println();
+	    System.out.println();
 	    System.out.println("====================================");
+	    System.out.println();
 	    System.out.println("Enter the recipe ID you want to like: ");
 	    int recipeId = scanner.nextInt();
+	    System.out.println();
+	    System.out.println();
 	    User user = null;
 	    CustomerSer customerSer = new CustomerSerImp();
 
@@ -277,8 +335,14 @@ public class CustomerUI {
 
 	        em.persist(recipeLike);
 	        et.commit();
+	        System.out.println();
+	        System.out.println();
 	        System.out.println("Like Added Successfully 👍");
-	        System.out.println("========================");
+	        System.out.println();
+	        System.out.println();
+	        System.out.println("=====================================");
+	        System.out.println();
+	        System.out.println();
 	    } catch (NoRecordFoundException | SomeThingWentWrongException ex) {
 	        System.out.println(ex.getMessage());
 	    } finally {

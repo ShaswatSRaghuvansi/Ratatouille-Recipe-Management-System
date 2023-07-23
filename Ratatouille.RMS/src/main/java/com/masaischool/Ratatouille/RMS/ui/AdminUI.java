@@ -20,7 +20,10 @@ import com.masaischool.Ratatouille.RMS.service.RecipeSerImp;
 public class AdminUI {
 
     public static void addRecipe(Scanner sc) {
-    	System.out.println("============================");
+    	System.out.println();
+    	System.out.println();
+    	System.out.println("=====================================");
+    	System.out.println();
         System.out.println("Enter Recipe Name");
         sc.nextLine();
         String recipeName = sc.nextLine().trim();  // Read the recipe name
@@ -38,8 +41,13 @@ public class AdminUI {
 
         try {
             adminSer.addRecipe(recipe);
-            System.out.println("Recipe Added To Gusteau's Successfully");
-            System.out.println("====================================");
+        	System.out.println();
+        	System.out.println();
+            System.out.println("Recipe Added To Ratatouille's Successfully 🫰");
+        	System.out.println();
+            System.out.println("=====================================");
+        	System.out.println();
+        	System.out.println();
         } catch (SomeThingWentWrongException ex) {
             System.out.println(ex.getMessage());
         }
@@ -52,7 +60,10 @@ public class AdminUI {
 		
 		
 			//code to take company details input
-			System.out.println("============================");
+		System.out.println();
+		System.out.println();
+			System.out.println("=====================================");
+			System.out.println();
 			System.out.print("Enter id ");
 			int id = sc.nextInt();
 			System.out.println("Enter Recipe Name");
@@ -78,8 +89,13 @@ public class AdminUI {
 			AdminSer adminSer = new AdminSerImp();
 			try {
 				adminSer.updateRecipe(recipe);;
-				System.out.println("Recipe updated to Gusteau's successfully");
-				System.out.println("======================================");
+				System.out.println();
+				System.out.println();
+				System.out.println("Recipe updated to Ratatouille's successfully 🫰");
+				System.out.println();
+				System.out.println("=====================================");
+				System.out.println();
+				System.out.println();
 			}catch(SomeThingWentWrongException | NoRecordFoundException ex) {
 				System.out.println(ex.getMessage());
 			}
@@ -88,19 +104,31 @@ public class AdminUI {
 	}
 	
 	public static void deleteRecipe(Scanner sc) {
+		System.out.println();
+		System.out.println();
 		System.out.println("=====================================================");
+		System.out.println();
 			System.out.print("Are you sure you want to delete your account?[y/n] ");
 			char choice = sc.next().toLowerCase().charAt(0);
 			if(choice == 'y') {
 				System.out.println("======================================");
+				System.out.println();System.out.println();
 				System.out.println("Enter the Recipe Id you want To delete");
 				int id  = sc.nextInt();
+				System.out.println();
+				System.out.println();
 				AdminSer adminSer = new AdminSerImp();
 				try {
 					adminSer.deleteRecipe(id);
+					System.out.println();
+					System.out.println();
 					System.out.println("===========================");
+					System.out.println();
 					System.out.println("Recipe Deleted successfully");
+					System.out.println();
 					System.out.println("===========================");
+					System.out.println();
+					System.out.println();
 				}catch(SomeThingWentWrongException | NoRecordFoundException ex) {
 					System.out.println(ex.getMessage());
 				}
@@ -130,12 +158,18 @@ public class AdminUI {
 		
 		    int choice = 0;
 		    do {
+		    	System.out.println();
+		    	System.out.println();
 		    	System.out.println("==================================");
+		    	System.out.println();
 		    	System.out.println("1. Top 5 Recipes");
 		    	System.out.println("2. Trending Recipes");
 		    	System.out.println("3. Comprehensive Likes and Recipes");
+		    	System.out.println();
 		    	System.out.println("==================================");
-		        
+		    	System.out.println();
+		    	System.out.println();
+		    	
 		        System.out.print("Enter selection: ");
 		        choice = sc.nextInt();
 		        switch (choice) {
@@ -162,11 +196,18 @@ public class AdminUI {
 		                MainRunner.main(new String[0]);
 		                break;
 		            case 0:
+		            	System.out.println();
 		                System.out.println("Have a Great Day 🫰");
+		                System.out.println();
 		                System.out.println("=================");
+		                System.out.println();
+		                System.out.println();
 		                break;
 		            default:
+		            	System.out.println();
 		                System.out.println("🚫 Invalid Selection 🚫, try again");
+		                System.out.println();
+		                System.out.println();
 		        }
 		    } while (choice != 0);
 	

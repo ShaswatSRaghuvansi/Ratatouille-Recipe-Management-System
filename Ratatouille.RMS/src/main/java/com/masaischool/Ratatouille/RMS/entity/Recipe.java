@@ -51,7 +51,7 @@ public class Recipe {
 	@PreRemove
     public void softDelete() {
         this.isDeleted = true;
-        
+        // will show when deleted without deleting permanenetly
     }
     
 	public Recipe() {
