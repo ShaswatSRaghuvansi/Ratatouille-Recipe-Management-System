@@ -63,9 +63,6 @@ Learn to <a href="https://www.youtube.com/watch?v=sJ64ZiB6PUU&t=324s"> Import&Ex
 For any further feedback, suggestions, or assistance, please feel free to contact us. We are here to help and support you.<br>
 
 Let's Connect 🫰
-![Slide7]()
 
+![Slide7](https://github.com/ShaswatSRaghuvansi/Ratatouille-Recipe-Management-System/assets/115460278/458ce827-5103-4cf7-b2d5-23fad57bb28c)
 
-
-<p><a href="https://github.com/ShaswatSRaghuvansi/Ratatouille-Recipe-Management-System"><img src="https://github.com/ShaswatSRaghuvansi/Ratatouille-Recipe-Management System/assets/115460278/2848da11-7a31-432d-8e81-e87b76ad6084"></a>
-</p>
