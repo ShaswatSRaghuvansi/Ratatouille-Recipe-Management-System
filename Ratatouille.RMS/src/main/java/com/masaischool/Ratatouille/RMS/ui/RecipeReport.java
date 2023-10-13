@@ -11,7 +11,10 @@ import jakarta.persistence.Query;
 
 public class RecipeReport {
     
-	public static void generateTopLikedRecipesReport() {
+	// Generates a report of the top liked recipes.
+    public static void generateTopLikedRecipesReport() {
+        // Retrieves and displays the top liked recipes by counting likes and ordering by likes count.
+    
 		
 		EntityManager entityManager = EMUtils.getEntityManager();
 	    String jpql = "SELECT r.recipeId, r.recipeName, COUNT(rl.likeId) AS likesCount " +
@@ -36,7 +39,10 @@ public class RecipeReport {
 	}
 	
 	
-	public static void viewTrendingRecipesForLast7Days() {
+ // Views trending recipes for the last 7 days based on likes.
+    public static void viewTrendingRecipesForLast7Days() {
+        // Retrieves and displays recipes that have gained the most likes in the last 7 days.
+    
 		
 		EntityManager entityManager = EMUtils.getEntityManager();
 		String jpql = "SELECT r.recipeId, r.recipeName, COUNT(rl.likeId) AS likesCount " +
@@ -64,21 +70,33 @@ public class RecipeReport {
 				}
 }
 	
-	public static void overAllLikes(){
+    // Generates a report of overall likes for recipes.
+    public static void overAllLikes() {
+        // Not yet implemented, you can add functionality to generate overall likes here.
+   
 		
 	}
 	
-	public static void generateLikesByIngredient() {
+ // Generates a report of likes for recipes with specific ingredients.
+    public static void generateLikesByIngredient() {
+        // Not yet implemented, you can add functionality to generate likes by ingredient here.
+   
 	   
 	}
 	
-	public static void generateLikesOverTime() {
+ // Generates a report of likes for recipes over a specified time period.
+    public static void generateLikesOverTime() {
+        // Not yet implemented, you can add functionality to generate likes over time here.
+   
 	
 	}
 
 	
 	
-	private static Date calculateStartDate() {
+ // Calculates the start date for a specified time period (e.g., 7 days ago).
+    private static Date calculateStartDate() {
+        // Calculates and returns the start date for a specified time period (e.g., 7 days ago).
+    
 	    // Get the current date
 	    Date currentDate = new Date();
 

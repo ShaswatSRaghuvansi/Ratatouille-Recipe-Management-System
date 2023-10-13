@@ -21,7 +21,10 @@ import jakarta.persistence.EntityTransaction;
 
 public class CustomerUI {
 
-	public static void customerRegistration(Scanner sc) {
+	// Registers a new customer with the system.
+    public static void customerRegistration(Scanner sc) {
+        // Collects customer registration details, creates a User object, and registers the user with the CustomerSer service.
+    
 		System.out.println();
 		System.out.println();
 		System.out.println("=================================");
@@ -55,7 +58,11 @@ public class CustomerUI {
 
 	}
 
-	static void userLogin(Scanner sc) {
+ // Logs in a customer to access their account.
+    static void userLogin(Scanner sc) {
+        // Prompts the user to enter their username and password for login.
+        // Checks the credentials with the CustomerSer service, and if successful, allows access to the user menu.
+   
 		
 		System.out.println();
 		System.out.println();
@@ -75,7 +82,10 @@ public class CustomerUI {
 		}
 	}
 
-	static void displayUserMenu() {
+ // Displays the user menu options.
+    static void displayUserMenu() {
+        // Displays a menu with options for customers, such as viewing recipes, searching for recipes, liking recipes, and logging out.
+    
 		System.out.println();
 		System.out.println();
 		System.out.println("=====================================");
@@ -91,7 +101,10 @@ public class CustomerUI {
 		System.out.println();
 	}
 
-	public static void userMenu(Scanner sc) {
+ // Manages the user menu and user interactions.
+    public static void userMenu(Scanner sc) {
+        // Handles user menu options and performs corresponding actions based on user choices.
+    
 		int choice = 0;
 		do {
 			displayUserMenu();
@@ -145,7 +158,11 @@ public class CustomerUI {
 		} while (choice != 0);
 	}
 
-	private static void findRecipeWithGivenIngredients(Scanner sc) {
+ // Searches for recipes with given ingredients and allows users to like/unlike recipes.
+    private static void findRecipeWithGivenIngredients(Scanner sc) {
+        // Prompts the user to enter ingredients and searches for recipes with those ingredients.
+        // Allows users to like or unlike recipes.
+    
 		
 		System.out.println("=====================================");
 		System.out.println();
@@ -165,7 +182,10 @@ public class CustomerUI {
 		
 	}
 
-	public static void viewAllRecipe() {
+ // Views all available recipes.
+    public static void viewAllRecipe() {
+        // Retrieves and displays a list of all available recipes.
+   
 		RecipeSer recipeSer = new RecipeSerImp();
 		try {
 			List<Recipe> recipeList = recipeSer.viewAllRecipe();
@@ -176,7 +196,11 @@ public class CustomerUI {
 
 	}
 	
-	public static void likeOrUnlike() {
+ // Handles the liking or unliking of recipes by customers.
+    public static void likeOrUnlike() {
+        // Provides options for customers to like or unlike recipes.
+        // Allows customers to navigate between menus and make their choices.
+    
 		
 		Scanner scanner = new Scanner(System.in);
 	    
@@ -216,8 +240,11 @@ public class CustomerUI {
 		
 	}
 	
-	public static void showRecipeOptions(Scanner scanner) {
-//	    Scanner scanner = new Scanner(System.in);
+ // Displays options for adding or removing likes on recipes.
+    public static void showRecipeOptions(Scanner scanner) {
+        // Displays a menu with options for adding or removing likes on recipes.
+    
+
 	    
 	    int choice ;
 	    do {
@@ -258,7 +285,10 @@ public class CustomerUI {
 	    
 	}
 
-	private static void removeLike() {
+ // Removes a like from a recipe.
+    private static void removeLike() {
+        // Prompts the user to enter a recipe ID and removes the like association from the database.
+    
 //	    Scanner scanner = new Scanner(System.in);
 //	    System.out.println("Enter the recipe ID you want to remove the like from: ");
 //	    int recipeId = scanner.nextInt();
@@ -300,8 +330,13 @@ public class CustomerUI {
 	}
 
 
-	private static void addLike() {
+	// Adds a like to a recipe.
+    private static void addLike() {
+        // Prompts the user to enter a recipe ID and associates a like with the user and the recipe.
+        // Adds the like association to the database.
+   
 	    Scanner scanner = new Scanner(System.in);
+	    scanner.close(); // to stop the resource leak
 	    System.out.println();
 	    System.out.println();
 	    System.out.println("====================================");

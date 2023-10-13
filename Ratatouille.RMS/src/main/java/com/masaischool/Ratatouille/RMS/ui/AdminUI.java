@@ -19,7 +19,10 @@ import com.masaischool.Ratatouille.RMS.service.RecipeSerImp;
 
 public class AdminUI {
 
+	// Adds a new recipe to the system.
     public static void addRecipe(Scanner sc) {
+        // Collects recipe information from the user, creates a Recipe object, and adds it to the system using the AdminSer service.
+    
     	System.out.println();
     	System.out.println();
     	System.out.println("=====================================");
@@ -56,7 +59,10 @@ public class AdminUI {
 
 
 	
-	public static void updateRecipe(Scanner sc) {
+ // Updates an existing recipe in the system.
+    public static void updateRecipe(Scanner sc) {
+        // Allows the admin to input changes to an existing recipe, updates the Recipe object, and sends it to the AdminSer service for updating.
+    
 		
 		
 			//code to take company details input
@@ -103,7 +109,10 @@ public class AdminUI {
 		
 	}
 	
-	public static void deleteRecipe(Scanner sc) {
+    // Deletes a recipe from the system.
+    public static void deleteRecipe(Scanner sc) {
+        // Confirms the admin's intention to delete a recipe, collects the recipe ID, and sends it to the AdminSer service for deletion.
+   
 		System.out.println();
 		System.out.println();
 		System.out.println("=====================================================");
@@ -135,7 +144,10 @@ public class AdminUI {
 			}
 	}
 	
-	public static void viewLikes() {
+ // Displays the number of likes for each recipe.
+    public static void viewLikes() {
+        // Retrieves a list of recipes, counts their likes, and displays the results.
+    
 		RecipeSer recipeSer = new RecipeSerImp();
 	    try {
 	        List<Recipe> recipeList = recipeSer.viewAllRecipe();
@@ -154,7 +166,10 @@ public class AdminUI {
 	}
 	
 	
-	public static void showReports(Scanner sc) {
+ // Displays various reports for admin.
+    public static void showReports(Scanner sc) {
+        // Provides options to generate and view different reports for the admin, such as top liked recipes, trending recipes, and comprehensive likes and recipes.
+    
 		
 		    int choice = 0;
 		    do {
