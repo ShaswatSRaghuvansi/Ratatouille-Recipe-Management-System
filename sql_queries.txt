@@ -1,0 +1,25 @@
+Here are all the SQL queries used in the provided Java code, combined in one place:
+
+`Check if a recipe with the same name exists:
+SELECT count(c) FROM Recipe c WHERE recipeName = :recipeName
+
+`Add a new recipe to the database:
+INSERT INTO Recipe (recipe_name, ingredients, preparation_steps, created_at, updated_at) VALUES (?, ?, ?, ?, ?)
+
+`Update an existing recipe in the database:
+UPDATE Recipe SET recipe_name = ?, ingredients = ?, preparation_steps = ?, updated_at = ? WHERE recipe_id = ?
+
+`Delete a recipe from the database (soft delete):
+UPDATE Recipe SET isDeleted = true WHERE recipe_id = ?
+
+`View all recipes in the database:
+SELECT * FROM Recipe r WHERE r.isDeleted = 0
+
+`View recipes with given ingredients in the database:
+SELECT * FROM Recipe r WHERE r.ingredients LIKE :ingredient AND r.isDeleted = 0
+
+`Retrieve a recipe by its ID from the database:
+SELECT * FROM Recipe c WHERE recipe_id = :id AND isDeleted = 0
+
+`Get the number of likes for a specific recipe:
+SELECT COUNT(rl) FROM RecipeLike rl WHERE rl.recipe.recipeId = :recipeId
