@@ -11,8 +11,10 @@ import jakarta.persistence.Query;
 
 public class RecipeReport {
     
-	public static void generateTopLikedRecipesReport() {
-		
+	// Generates a report of the top liked recipes
+    public static void generateTopLikedRecipesReport() {
+        // ... (queries the database for the top liked recipes and displays the report)
+    	
 		EntityManager entityManager = EMUtils.getEntityManager();
 	    String jpql = "SELECT r.recipeId, r.recipeName, COUNT(rl.likeId) AS likesCount " +
 	                  "FROM Recipe r " +
@@ -36,8 +38,10 @@ public class RecipeReport {
 	}
 	
 	
-	public static void viewTrendingRecipesForLast7Days() {
-		
+ // Generates a report of trending recipes over the last 7 days
+    public static void viewTrendingRecipesForLast7Days() {
+        // ... (queries the database for trending recipes in the last 7 days and displays the report)
+    	
 		EntityManager entityManager = EMUtils.getEntityManager();
 		String jpql = "SELECT r.recipeId, r.recipeName, COUNT(rl.likeId) AS likesCount " +
                 "FROM Recipe r " +
@@ -64,21 +68,29 @@ public class RecipeReport {
 				}
 }
 	
-	public static void overAllLikes(){
+    // Generates an overall likes report
+    public static void overAllLikes() {
+        // ... (queries the database for overall likes and displays the report)
+    
 		
 	}
 	
-	public static void generateLikesByIngredient() {
-	   
-	}
+ // Generates a report of likes by ingredient
+    public static void generateLikesByIngredient() {
+        // ... (queries the database for likes by ingredient and displays the report)
+    }
 	
-	public static void generateLikesOverTime() {
-	
-	}
+    // Generates a report of likes over time
+    public static void generateLikesOverTime() {
+        // ... (queries the database for likes over time and displays the report)
+    }
 
 	
 	
-	private static Date calculateStartDate() {
+ // Calculates the start date for a specified period (e.g., 7 days ago)
+    private static Date calculateStartDate() {
+        // ... (calculates and returns the start date for a specified period)
+   
 	    // Get the current date
 	    Date currentDate = new Date();
 

@@ -19,7 +19,10 @@ import com.masaischool.Ratatouille.RMS.service.RecipeSerImp;
 
 public class AdminUI {
 
+	// Adds a new recipe to the system
     public static void addRecipe(Scanner sc) {
+        // ... (captures recipe details and adds it to the system)
+   
     	System.out.println();
     	System.out.println();
     	System.out.println("=====================================");
@@ -56,7 +59,10 @@ public class AdminUI {
 
 
 	
-	public static void updateRecipe(Scanner sc) {
+    // Updates an existing recipe in the system
+    public static void updateRecipe(Scanner sc) {
+        // ... (captures updated recipe details and updates the recipe)
+    
 		
 		
 			//code to take company details input
@@ -103,12 +109,15 @@ public class AdminUI {
 		
 	}
 	
-	public static void deleteRecipe(Scanner sc) {
+    // Deletes a recipe from the system
+    public static void deleteRecipe(Scanner sc) {
+        // ... (prompts for confirmation and deletes a recipe by its ID)
+    
 		System.out.println();
 		System.out.println();
 		System.out.println("=====================================================");
 		System.out.println();
-			System.out.print("Are you sure you want to delete your account?[y/n] ");
+			System.out.print("Are you sure you want to proceed with deleting recipe/s ?[y/n] ");
 			char choice = sc.next().toLowerCase().charAt(0);
 			if(choice == 'y') {
 				System.out.println("======================================");
@@ -135,7 +144,10 @@ public class AdminUI {
 			}
 	}
 	
-	public static void viewLikes() {
+ // Displays the likes count for each recipe
+    public static void viewLikes() {
+        // ... (retrieves and displays the likes count for each recipe)
+    
 		RecipeSer recipeSer = new RecipeSerImp();
 	    try {
 	        List<Recipe> recipeList = recipeSer.viewAllRecipe();
@@ -154,7 +166,10 @@ public class AdminUI {
 	}
 	
 	
-	public static void showReports(Scanner sc) {
+ // Shows various reports related to recipes
+    public static void showReports(Scanner sc) {
+        // ... (displays options for generating different recipe reports)
+    
 		
 		    int choice = 0;
 		    do {

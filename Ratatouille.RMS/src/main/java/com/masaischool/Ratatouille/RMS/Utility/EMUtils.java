@@ -5,14 +5,18 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 public class EMUtils {
-	static EntityManagerFactory emf;
+    // Static EntityManagerFactory to manage the creation of EntityManager instances.
+    static EntityManagerFactory emf;
 
-	static {
-		emf = Persistence.createEntityManagerFactory("dbconnect"); // connection to persistence.xml file
-	}
+    // Static block that runs when the class is loaded to initialize the EntityManagerFactory.
+    static {
+        // Create an EntityManagerFactory based on the "dbconnect" persistence unit defined in persistence.xml.
+        emf = Persistence.createEntityManagerFactory("dbconnect");
+    }
 
-	public static EntityManager getEntityManager() {
-		return emf.createEntityManager();
-	}
-
+    // Public method to obtain an EntityManager for performing database operations.
+    public static EntityManager getEntityManager() {
+        // Create and return an EntityManager instance using the initialized EntityManagerFactory.
+        return emf.createEntityManager();
+    }
 }

@@ -4,16 +4,10 @@ import java.util.Scanner;
 
 public class MainRunner {
 
-	static void displayAdminMenu() {
-//	System.out.println("██████╗ . █████╗ ████████╗ █████╗ ████████╗ ██████╗ ██╗   ██╗██╗██╗     ██╗     ███████╗███████╗");
-//		
-////			+ 		"		██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗╚══██╔══╝██╔═══██╗██║   ██║██║██║     ██║     ██╔════╝██╔════╝\n"
-////			+ 		"		██████╔╝███████║   ██║   ███████║   ██║   ██║   ██║██║   ██║██║██║     ██║     █████╗  ███████╗\n"
-////			+		 "		██╔══██╗██╔══██║   ██║   ██╔══██║   ██║   ██║   ██║██║   ██║██║██║     ██║     ██╔══╝  ╚════██║\n"
-////			+ 		"		██║  ██║██║  ██║   ██║   ██║  ██║   ██║   ╚██████╔╝╚██████╔╝██║███████╗███████╗███████╗███████║\n"
-////			+ 		"		╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝    ╚═════╝  ╚═════╝ ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝");	
-////	
-////	
+	// Displays the admin menu options
+    static void displayAdminMenu() {
+        // ... (output menu options)
+
 
 		System.out.println();
 		System.out.println("+===========================+");
@@ -31,7 +25,10 @@ public class MainRunner {
 		System.out.println();
 	}
 //  <===============================MENU PORTAL STARTS HERE====================================>
-	static void adminMenu(Scanner sc) {
+ // Main logic for the admin menu
+    static void adminMenu(Scanner sc) {
+        // ... (loops through menu options and calls appropriate methods)
+    
 		int choice = 0;
 		do {
 			displayAdminMenu();
@@ -91,7 +88,10 @@ public class MainRunner {
 	
 //  <===============================ADMIN PORTAL STARTS HERE====================================>
 	
-	static void adminLogin(Scanner sc) {
+ // Handles admin login and navigation to the admin menu
+    static void adminLogin(Scanner sc) {
+        // ... (asks for username and password, validates, and calls adminMenu)
+  
 		System.out.println();
 		System.out.println("===============");
 		System.out.println();
@@ -119,7 +119,12 @@ public class MainRunner {
 		Scanner sc = new Scanner(System.in);
 		int choice = 0;
 		do {
+			
+			// Displays the main menu for selecting user roles
 			System.out.println();
+			System.out.println("===========================================");
+			System.out.println("🧀 RATATOUILLE RECIPE MANAGEMENT SYSTEM 🧀");
+			System.out.println("===========================================");
 			System.out.println();
 			System.out.println("============================");
 			System.out.println();
@@ -133,6 +138,7 @@ public class MainRunner {
 			System.out.println();
 			System.out.print("Enter Selection ");
 			
+			// ... (prompts user for input and navigates to respective logic)
 			choice = sc.nextInt();
 			switch (choice) {
 			case 1:

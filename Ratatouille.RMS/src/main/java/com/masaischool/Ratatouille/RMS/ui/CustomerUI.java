@@ -21,8 +21,11 @@ import jakarta.persistence.EntityTransaction;
 
 public class CustomerUI {
 
-	public static void customerRegistration(Scanner sc) {
-		System.out.println();
+	// Handles customer registration
+    public static void customerRegistration(Scanner sc) {
+        // ... (captures user details and adds a new customer to the system)
+    
+    	System.out.println();
 		System.out.println();
 		System.out.println("=================================");
 		System.out.println("Enter UserName 👤");
@@ -55,7 +58,10 @@ public class CustomerUI {
 
 	}
 
-	static void userLogin(Scanner sc) {
+ // Handles customer login and navigation to the user menu
+    static void userLogin(Scanner sc) {
+        // ... (prompts for username and password, validates, and navigates to the user menu)
+    
 		
 		System.out.println();
 		System.out.println();
@@ -75,7 +81,10 @@ public class CustomerUI {
 		}
 	}
 
-	static void displayUserMenu() {
+ // Displays the user menu options
+    static void displayUserMenu() {
+        // ... (outputs user menu options)
+   
 		System.out.println();
 		System.out.println();
 		System.out.println("=====================================");
@@ -91,7 +100,10 @@ public class CustomerUI {
 		System.out.println();
 	}
 
-	public static void userMenu(Scanner sc) {
+    // Handles the user menu, including viewing recipes, finding recipes, and liking/unliking
+    public static void userMenu(Scanner sc) {
+        // ... (manages user menu options and their functionality)
+    
 		int choice = 0;
 		do {
 			displayUserMenu();
@@ -145,8 +157,10 @@ public class CustomerUI {
 		} while (choice != 0);
 	}
 
-	private static void findRecipeWithGivenIngredients(Scanner sc) {
-		
+    // Searches for recipes with given ingredients
+    private static void findRecipeWithGivenIngredients(Scanner sc) {
+        // ... (searches for and displays recipes based on provided ingredients)
+   	
 		System.out.println("=====================================");
 		System.out.println();
 		System.out.println("Enter the Ingrident ");
@@ -165,7 +179,10 @@ public class CustomerUI {
 		
 	}
 
-	public static void viewAllRecipe() {
+ // Displays all available recipes
+    public static void viewAllRecipe() {
+        // ... (displays all recipes available in the system)
+    
 		RecipeSer recipeSer = new RecipeSerImp();
 		try {
 			List<Recipe> recipeList = recipeSer.viewAllRecipe();
@@ -176,7 +193,10 @@ public class CustomerUI {
 
 	}
 	
-	public static void likeOrUnlike() {
+ // Allows the user to like or unlike a recipe
+    public static void likeOrUnlike() {
+        // ... (provides options to like or unlike a recipe and navigates accordingly)
+  
 		
 		Scanner scanner = new Scanner(System.in);
 	    
@@ -216,9 +236,10 @@ public class CustomerUI {
 		
 	}
 	
-	public static void showRecipeOptions(Scanner scanner) {
-//	    Scanner scanner = new Scanner(System.in);
-	    
+ // Shows options for liking or unliking a recipe
+    public static void showRecipeOptions(Scanner scanner) {
+        // ... (provides options to like or unlike a recipe and navigates accordingly)
+       
 	    int choice ;
 	    do {
 	    	System.out.println();
@@ -258,7 +279,10 @@ public class CustomerUI {
 	    
 	}
 
-	private static void removeLike() {
+ // Removes a like from a recipe
+    private static void removeLike() {
+        // ... (removes a like from a recipe and updates associations in the system)
+   
 //	    Scanner scanner = new Scanner(System.in);
 //	    System.out.println("Enter the recipe ID you want to remove the like from: ");
 //	    int recipeId = scanner.nextInt();
@@ -300,7 +324,10 @@ public class CustomerUI {
 	}
 
 
-	private static void addLike() {
+	// Adds a like to a recipe
+    private static void addLike() {
+        // ... (adds a like to a recipe and updates associations in the system)
+   
 	    Scanner scanner = new Scanner(System.in);
 	    System.out.println();
 	    System.out.println();

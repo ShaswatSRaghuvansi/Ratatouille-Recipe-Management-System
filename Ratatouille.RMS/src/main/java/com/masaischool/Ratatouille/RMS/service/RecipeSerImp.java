@@ -9,25 +9,25 @@ import com.masaischool.Ratatouille.RMS.entity.User;
 import com.masaischool.Ratatouille.RMS.exception.NoRecordFoundException;
 import com.masaischool.Ratatouille.RMS.exception.SomeThingWentWrongException;
 
-public class RecipeSerImp implements RecipeSer{
+public class RecipeSerImp implements RecipeSer {
 
-	RecipeDao recipeDao = new RecipeDaoImp();
-	@Override
-	public List<Recipe> viewAllRecipe() throws SomeThingWentWrongException, NoRecordFoundException {
-		
-		return recipeDao.viewAllRecipe();
-	}
-	@Override
-	public List<Recipe> viewRecipesWithGivenIngredients(String ingredients) throws SomeThingWentWrongException, NoRecordFoundException {
-		return recipeDao.viewRecipesWithGivenIngredients(ingredients);
-		 
-	}
-	@Override
-	public Recipe getRecipeByID(int id) throws SomeThingWentWrongException, NoRecordFoundException {
-		
-		return recipeDao.getRecipeByID(id);
-	}
+    RecipeDao recipeDao = new RecipeDaoImp(); // Instantiate the RecipeDao implementation
 
-	
+    // Retrieves a list of all recipes in the system
+    @Override
+    public List<Recipe> viewAllRecipe() throws SomeThingWentWrongException, NoRecordFoundException {
+        return recipeDao.viewAllRecipe(); // Delegates the task to the RecipeDao and returns the list of recipes
+    }
 
+    // Retrieves a list of recipes that contain specific ingredients
+    @Override
+    public List<Recipe> viewRecipesWithGivenIngredients(String ingredients) throws SomeThingWentWrongException, NoRecordFoundException {
+        return recipeDao.viewRecipesWithGivenIngredients(ingredients); // Delegates the task to the RecipeDao and returns the list of recipes
+    }
+
+    // Retrieves a recipe with a specified ID
+    @Override
+    public Recipe getRecipeByID(int id) throws SomeThingWentWrongException, NoRecordFoundException {
+        return recipeDao.getRecipeByID(id); // Delegates the task to the RecipeDao and returns the recipe
+    }
 }
